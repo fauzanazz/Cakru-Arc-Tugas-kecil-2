@@ -1,0 +1,92 @@
+body {
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+div.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+div.mainwindow {
+    display: flex;
+    order: 1;
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    padding: 10px;
+    justify-content: center;
+}
+
+h1.MW {
+    padding: 2vw;
+    font-family: "Karasha";
+    text-align: center;
+    font-size: 10vh;
+}
+
+p.score {
+    padding: 2vw;
+    font-family: "Premier 2019";
+    text-align: center;
+    font-size: 8vh;
+}
+
+div.frstpage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
+}
+
+button.start{
+    display: flex;
+    height: 20px;
+}
+
+div.scndpage {
+    display: none;
+    flex-direction: row;
+    max-height: 100%;
+    max-width: auto;
+    padding: 10px;
+}
+
+button.firstbutton {
+    order: 2;
+    padding: 11px;
+    background-image: url(../assets/img/Jan.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 250px;
+    width: 250px;
+    border-radius: 250px;
+}
+
+button.scndbutton {
+    order: 3;
+    padding: 10px;
+    background-image: url(../assets/img/Ken.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 250px;
+    width: 250px;
+    border-radius: 250px;
+}
+
+button.thirdbutton {
+    order: 1;
+    padding: 10px;
+    background-image: url(../assets/img/Pon.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 250px;
+    width: 250px;
+    border-radius: 250px;
+}
