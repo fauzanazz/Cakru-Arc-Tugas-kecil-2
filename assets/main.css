@@ -5,8 +5,6 @@ body {
     align-items: center;
 }
 
-
-
 div.container {
     display: flex;
     flex-direction: column;
@@ -24,17 +22,54 @@ div.mainwindow {
 }
 
 h1.MW {
-    padding: 2vw;
+    padding: 10px;
     font-family: "Karasha";
     text-align: center;
     font-size: 10vh;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-p.score {
-    padding: 2vw;
+h2.win {
+    display: none;
     font-family: "Premier 2019";
     text-align: center;
     font-size: 8vh;
+}
+
+h2.lose {
+    display: none; 
+    font-family: "Premier 2019";
+    text-align: center;
+    font-size: 8vh;
+}
+
+h2.draw {
+    display: none; 
+    font-family: "Premier 2019";
+    text-align: center;
+    font-size: 8vh;
+}
+
+p.score {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Premier 2019";
+    text-align: center;
+    font-size: 8vh;
+}
+
+div.versusimage {
+    display: none;
+    justify-content: center;
+}
+
+img.img1{
+    padding-right: 10px;
+}
+
+img.img2{
+    padding-left: 10px;
 }
 
 div.frstpage {
@@ -53,31 +88,32 @@ button.start{
 div.scndpage {
     display: none;
     flex-direction: row;
-    max-height: 100%;
-    max-width: auto;
+    justify-content:center ;
+    max-height: 100vh;
+    max-width: 100vw;
     padding: 10px;
 }
 
 button.firstbutton {
     order: 2;
     padding: 11px;
-    background-image: url(../assets/img/Jan.png);
+    background-image: url(../assets/img/Ken.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    height: 250px;
-    width: 250px;
-    border-radius: 250px;
+    height: 28vh;
+    width: 13vw;
+    border-radius: 350px;
 }
 
 button.scndbutton {
     order: 3;
     padding: 10px;
-    background-image: url(../assets/img/Ken.png);
+    background-image: url(../assets/img/Jan.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    height: 250px;
-    width: 250px;
-    border-radius: 250px;
+    height: 28vh;
+    width: 13vw;
+    border-radius: 350px;
 }
 
 button.thirdbutton {
@@ -86,7 +122,14 @@ button.thirdbutton {
     background-image: url(../assets/img/Pon.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    height: 250px;
-    width: 250px;
-    border-radius: 250px;
+    height: 28vh;
+    width: 13vw;
+    border-radius: 350px;
+}
+
+div.thrdpage {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    height: 130px;
 }

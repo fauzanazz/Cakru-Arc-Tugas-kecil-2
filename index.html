@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/main.css">
-    <script src="./assets/main.js"></script> 
-    <title>Main Page</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./assets/main.css">
+        <script src="./assets/main.js"></script> 
+        <title>Main Page</title>
 </head>
 <body>
     <div class="container">
         <div class="MainWindow">
             <h1 class="MW">JAN KEN PON</h1>
-            <p class="score">99</p>
+            <p class="score">BOT - USER</p>
+            <div class="versusimage" id="output">
+                <img src="" alt="ini foto1" class="img1" id="img1">
+                <img src="" alt="ini foto2" class="img2" id="img2">
+            </div>
+            <p class="score" id="score"></p>
+            <div class="thrdpage" id="page3">
+                <h2 class="win" id="win">YOU WIN</h2>
+                <h2 class="lose" id="lose">YOU LOSE</h2>
+                <h2 class="draw" id="draw">DRAW</h2>
+            </div>
             <div class="frstpage" id="page1">
                 <button class="start" onclick="hide()"> Start </button>
             </div>
             <div class="scndpage" id="page2">
-                <button class="firstbutton" onclick="ken()"></button>
-                <button class="scndbutton" onclick="pon()"></button>
-                <button class="thirdbutton" onclick="jan()"></button>
+                <button class="firstbutton" onclick="kertas()"></button>
+                <button class="scndbutton" onclick="batu()"></button>
+                <button class="thirdbutton" onclick="gunting()"></button>
             </div>
         </div>
     </div>
+    <script>
+        scorecounter()
+    </script>
 </body>
 </html>
