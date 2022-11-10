@@ -3,25 +3,317 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
 }
 
 div.container {
     display: flex;
-    flex-direction: column;
     justify-content: center;
 }
 
-div.mainwindow {
+
+/* opening */
+div.scroller {
+    width: 100%;
+    height: 125px;
     display: flex;
-    order: 1;
-    margin: auto;
-    width: 50%;
-    border: 3px solid black;
-    padding: 10px;
+    flex-direction: column;
+    position: fixed;
+    margin-left: -25%;
+    margin-top: -25px;
+    top: 50%;
+    bottom: 25%;
+}
+
+.scroller {
+    height: 50px;
     justify-content: center;
+    line-height: 50px;
+    float: left;
+    margin-left: 5px;
+    overflow: hidden;
+    font-size: 200%;
+    color: #000;
+}
+
+div.inner {
+    margin-top: 1300px;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+p.desc {
+    padding: 125px;
+}
+
+div.button_start {
+    display: flex;
+    margin-left: 20%;
+}
+/* Animation */
+
+button.startanim {
+    font-family: 'Raleway', sans-serif;
+    border-color: transparent;
+    font-size: 100%;
+    transition-duration: 0.5s;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+    background-color: transparent;
+}
+
+button.startanim:hover {
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+
+button:nth-child(1){
+    filter: hue-rotate(270deg);
+}
+button:nth-child(2){
+    filter: hue-rotate(110deg);
+}
+button.startanim span{
+    position: absolute;
+    display: block;
+}
+button.startanim span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+
+button.startanim span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+button.startanim span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+button.startanim span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+
+.inner {
+    animation: scroll 1s 1 ease-out;
+    animation-fill-mode: forwards;
+}
+
+.button_start {
+    animation: button 1s 1 ease-out;
+    animation-fill-mode: forwards;
+}
+
+.animationMW {
+    animation: animationMWOut 2s 1 ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scroll {
+    11% {
+        margin-top: 1300px;
+    }
+    22% {
+        margin-top: 1300px;
+    }
+    33% {
+        margin-top: 600px;
+    }
+    44% {
+        margin-top: 600px;
+    }
+    55% {
+        margin-top: 0px;
+    }
+    66% {
+        margin-top: 0px;
+    }
+    77% {
+        margin-top: -700px;
+    }
+    88% {
+        margin-top: -700px;
+    }
+    100% {
+        margin-top: -1200px;
+    }
+}
+
+@keyframes button {
+    0% {
+        margin-top: 100px;
+    }
+    88% {
+        margin-top: 100px;
+    }
+    100% {
+        margin-top: -160px;
+    }
+}
+
+@keyframes animationMWOut {
+    0% {
+        margin-left: 0px;
+    }
+    90% {
+        margin-left: -150vw;
+    }
+    100% {
+        margin-left: -200vw;
+    }
+}
+
+/* main menu */
+div.MainMenu {
+    top: 10vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    flex-direction: column;
+}
+
+h2.MWName {
+    color: aliceblue;
+    font-size: 200%;
+    font-weight: bold;
+}
+
+div.MainMenu2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button.NewGame {
+    background-color: transparent;
+    font-size: 200%;
+    font-family: 'Lato';
+    color: aliceblue;
+    border-color: aliceblue;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+button.Continue {
+    background-color: transparent;
+    font-size: 200%;
+    font-family: 'Lato';
+    color: aliceblue;
+    border-color: aliceblue;
+    border-radius: 10px;
+    margin-left: 10px;
+    padding: 10px;
+}
+
+/* form */
+div.form {
+    display: none;
+    top: 30vh;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h2.name {
+    font-family: 'Lato';
+    color: aliceblue;
+}
+
+input.name {
+    margin-bottom: 20px;
+}
+
+button.enter {
+    background-color: transparent;
+    font-family: 'Lato';
+    padding: 10px;
+    font-size: 200%;
+    color: aliceblue;
+    border-radius: 10px;
+    border-color: aliceblue;
+}
+
+/* Mainwindow */
+div.MainWindow {
+    color: white;
+    display: none;
+    flex-direction: column;
 }
 
 h1.MW {
+    color: white;
     padding: 10px;
     font-family: "Karasha";
     text-align: center;
@@ -61,6 +353,7 @@ p.score {
 
 div.versusimage {
     display: none;
+    flex-direction: row;
     justify-content: center;
 }
 
@@ -80,9 +373,18 @@ div.frstpage {
     padding: 2vw;
 }
 
-button.start{
+
+button.start {
     display: flex;
-    height: 20px;
+    padding: 10px;
+    font-size: 200%;
+    color: white;
+    background-color: transparent;
+    border-color: aliceblue;
+    border-radius: 20px;
+    font-family:'lato';
+    height: 60px;
+    left: 50%;
 }
 
 div.scndpage {
