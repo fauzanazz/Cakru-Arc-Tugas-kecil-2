@@ -39,11 +39,12 @@
                 <button class="Continue" onclick="continues(), CC(), EE()" id="continue">Continue</button>
             </div>
         </div>
-        <div class="form" id="form">
+        <iframe name="dummy" id="dummy" style="display: none;"></iframe>
+        <form class="form" id="form" name="form" target="dummy" onsubmit="entername()">
             <h2 class="name">ENTER NAME</h2>
-            <input type="text" name="" id="name" class="name">
-            <button onclick="entername(), scorecounter(), CC(), EE()" class="enter">Enter</button>
-        </div>
+            <input type="text" name="name" id="name" class="name" required>
+            <button onclick="" class="enter">Enter</button>
+        </form>
         <div class="MainWindow" id="MainWindow">
             <h1 class="MW" id="cheat">JAN KEN PON</h1>
             <p class="score" id="username"></p>

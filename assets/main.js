@@ -164,16 +164,20 @@ function scorecounter(state) {
 
 // Name input
 function entername() {
-    var inputname = document.getElementById("name");
-    if (inputname == "") {
+    let name = document.getElementById("name").value;
+    let check = name.toString().replace(/^\s+|\s+$/gm,'');
+    if (check == "" || check == null || check == undefined) {
         alert("Masukkan nama!");
-        return;
+        return false;
     } else {
-        localStorage.setItem("name", inputname.value);
+        localStorage.setItem("name", name);
         var names = localStorage.getItem("name");
         document.getElementById("username").innerHTML = "BOT - " + names;
         document.getElementById("form").style.display = 'none';
         document.getElementById("MainWindow").style.display = 'flex';
+        scorecounter(); 
+        CC(); 
+        EE();
     }
 }
 

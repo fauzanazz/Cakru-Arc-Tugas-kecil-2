@@ -3,14 +3,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #36454f;
 }
 
 div.container {
     display: flex;
     justify-content: center;
 }
-
 
 /* opening */
 div.scroller {
@@ -277,7 +276,7 @@ button.Continue {
 }
 
 /* form */
-div.form {
+form.form {
     display: none;
     top: 30vh;
     position: relative;
